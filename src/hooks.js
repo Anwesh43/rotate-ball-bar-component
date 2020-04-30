@@ -12,7 +12,7 @@ export const useAnimatedScale = (scGap, delay) => {
                 const interval = setInterval(() => {
                     currScale += scGap
                     setScale(currScale)
-                    if (Math.abs(scale - prevScale) > 1) {
+                    if (currScale > 1) {
                         setScale(0)
                         setAnimated(false)
                         clearInterval(interval)
