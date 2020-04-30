@@ -31,3 +31,14 @@ const rotateBarStyle = (w, h, scale) => {
     const WebkitTransform = `rotate(${360 * sinify(scale)}deg)`
     return {position, left, top, width, height, background, WebkitTransform}
 }
+
+const RotateBarBall = ({scale, w, h, onClick}) => {
+    return <div onClick = {onClick}>
+              <div style = {ballStyle(w, h, scale)}>
+              </div>
+              <div style = {rotateBarStyle(w, h, scale)}>
+              </div>
+          </div>
+}
+
+export default RotateBarBall
